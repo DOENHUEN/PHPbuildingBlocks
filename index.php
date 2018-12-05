@@ -157,12 +157,13 @@ if ($choice>0)
       echo 'Something went wrong';
       break;
   }
-  echo $initialTemprature , ' graden ' , $kindInitial , ' is gelijk aan ' , $newTemprature , ' graden ' , $kindNew , '. <br/>';
+  echo $initialTemprature , '&deg; (graden) ' , $kindInitial , ' is gelijk aan ' , $newTemprature , ' &deg; (graden) ' , $kindNew , '. <br/>';
+  #symbolen opzoeken via entities html
 } else {
   echo 'Er ging iets mis';
 }
 
-/*
+/* drawing board
 $celToFah = ($initialTemprature * 9/5)+32;
 $celToKev = $initialTemprature + 273.15;
 $fahToCel = ($initialTemprature - 32)/(9/5);
@@ -170,3 +171,20 @@ $fahToKel = (($initialTemprature-32)*(5/9))+273.15;
 $kelToCel = $initialTemprature - 273.15;
 $kelToFah = ($initialTemprature* 9/5)-459.67;
 */
+
+
+#extra oefening waardes wisselen zonder extra variabele
+$x = 11;
+$y = 20;
+$x ^= $y ^= $x ^= $y;
+#https://stackoverflow.com/questions/3541730/is-there-a-php-function-for-swapping-the-values-of-two-variables
+
+echo $x;
+echo $y;
+
+$x=$x+$y;
+$y=$x-$y;
+$x=$x-$y;
+
+echo $x;
+echo $y;
